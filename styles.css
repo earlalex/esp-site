@@ -1,0 +1,495 @@
+:root {
+  --primary-color: #C5A572; /* Gold from logo */
+  --secondary-color: #333333; /* Dark grey from logo */
+  --accent-color: #6c5ce7;
+  --text-color: #4A4A4A;
+  --light-gray: #f5f5f5;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  padding: 1rem 2rem;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+.logo span {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #3c4c5c;
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+nav a:hover {
+  color: var(--primary-color);
+}
+
+header {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url('./esp-banner.jpg') center/cover;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.hero {
+  width: 100%;
+  padding: 0 2rem;
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: var(--primary-color);
+  color: #3c4c5c;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: var(--transition);
+}
+
+.cta-button:hover {
+  background: #B49461; /* Darker gold */
+  transform: translateY(-2px);
+}
+
+section {
+  padding: 5rem 2rem;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  color: #3c4c5c;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card {
+  padding: 2rem;
+  text-align: center;
+  background: white;
+  border: 1px solid var(--primary-color);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: var(--transition);
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-icon {
+  margin-bottom: 1rem;
+}
+
+.service-icon svg circle,
+.service-icon svg path,
+.service-icon svg rect {
+  stroke: var(--primary-color);
+}
+
+.portfolio {
+  background: var(--light-gray);
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.event-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: var(--transition);
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+}
+
+.event-image {
+  height: 200px;
+}
+
+.service-card.event-image.corporate {
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.8), 
+    rgba(255, 255, 255, 0.8)
+  ), url('./esp-corporate-event.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.service-card.event-image.wedding {
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.8), 
+    rgba(255, 255, 255, 0.8)
+  ), url('./esp-wedding-event.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.service-card.event-image.social {
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.8), 
+    rgba(255, 255, 255, 0.8)
+  ), url('./esp-social-event.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.event-image.corporate {
+  background-image: url('./esp-corporate-event-2.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.event-image.wedding {
+  background-image: url('./esp-wedding-event-2.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.event-image.social {
+  background-image: url('./esp-social-event-2.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.event-card h3, .event-card p {
+  padding: 1rem;
+}
+
+.about {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-content {
+  max-width: 800px;
+}
+
+.achievements {
+  list-style: none;
+  margin-top: 2rem;
+}
+
+.achievements li {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.contact {
+  background: #3c4c5c;
+}
+.contact h2 {
+  color: white;
+}
+.contact-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input, select, textarea {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+button {
+  padding: 1rem;
+  background: var(--primary-color);
+  color: #3c4c5c;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+button:hover {
+  background: #B49461;
+}
+
+footer {
+  background: var(--secondary-color);
+  color: white;
+  padding: 3rem 2rem 1rem;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section h3 {
+  margin-bottom: 1rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.experienced {
+  padding: 5rem 2rem;
+  background-color: #C5A572;
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.event-types {
+  padding: 5rem 2rem;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.8), 
+    rgba(255, 255, 255, 0.8)
+  ), url('./esp-experienced-background.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.event-types h2 {
+  color: #3c4c5c;
+}
+
+.event-types-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+}
+
+.event-type {
+  padding: 2rem;
+  background: var(--light-gray);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.event-type h3 {
+  color: #3c4c5c;
+}
+
+.event-types-footer {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.our-story {
+  padding: 5rem 2rem;
+}
+
+.timeline {
+  margin: 3rem 0;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+  height: 300px;
+  overflow: hidden;
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.timeline-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-item p {
+  color: #3c4c5c;
+}
+
+.timeline-image {
+  width: 300px;
+}
+
+.year {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  min-width: 100px;
+}
+
+.achievement {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-top: 2rem;
+}
+
+.media {
+  padding: 5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.youtube-video {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-group {
+  flex: 1;
+}
+
+address {
+  font-style: normal;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  .services-grid,
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-row {
+    flex-direction: column;
+  }
+  
+  .timeline-item {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .year {
+    min-width: auto;
+  }
+}
